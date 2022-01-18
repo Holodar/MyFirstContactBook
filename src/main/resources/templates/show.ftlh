@@ -18,7 +18,7 @@
          <li class="list-group-item">Number : ${contact.numbers}</li>
          <li class="list-group-item">Contact ID : ${contact.id}</li>
      </ul>
-     <form action="${contact.id}" method="DELETE">
+     <form action="/${contact.id}/delete" method="post">
         <button type="submit" class="btn btn-danger"><i class="fas fa-trash me-1"></i> Delete</button>
      </form>
  </div>

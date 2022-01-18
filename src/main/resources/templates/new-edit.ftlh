@@ -24,36 +24,24 @@
 </#if>
     <div>
     <form id="creatForm" action="${urlAction}" method="post">
+        <#if !add>
+            <input type="hidden" value="${contact.id}" name="id">
+        </#if>
         <div class="row">
         <div class="mb-3 col-md-4">
-            <label for="exampleInputEmail1" class="form-label ml-7">First Name</label>
-            <input type="text" class="form-control" id="firstName" value>
+            <label for="exampleInputFirstName" class="form-label ml-7">First Name</label>
+            First Name : <@spring.formInput "contact.firstName" "" "text"/> <br/>
         </div>
         <div class="mb-3 col-md-4">
-            <label for="exampleInputEmail1" class="form-label ml-1">Second Name </label>
-            <input type="text" class="form-control" id="secondName" value>
+            <label for="exampleInputSecondName" class="form-label ml-1">Second Name </label>
+            Second Name : <@spring.formInput "contact.secondName" "" "text"/> <br/>
         </div>
         <div class="mb-3 col-md-4">
-            <label for="exampleInputEmail1" class="form-label"> Phone Number </label>
-            <input type="text" class="form-control" id="numbers" value>
+            <label for="exampleInputNumbers" class="form-label"> Phone Number </label>
+            Numbers : <@spring.formInput "contact.numbers" "" "text"/> <br/>
         </div>
         </div>
-        <#--<input type="text" name="id"  hidden value="${contact.id}"/>-->
-        <#--<#if contact.id??>
-            <tr>
-                <td>ID</td>
-                <td>:</td>
-                <td>${contact.id}</td>
-            </tr>
-        </#if>-->
-       <#-- First Name : <@spring.formInput "contact.firstName" "" "text"/> <br/>
-        <@spring.showErrors "<br>"/>
-        Second Name : <@spring.formInput "contact.secondName" "" "text"/> <br/>
-        <@spring.showErrors "<br>"/>
-        Numbers : <@spring.formInput "contact.numbers" "" "text"/> <br/>
-        <@spring.showErrors "<br>"/>-->
         <button type="submit" class="btn btn-success"><i class="fas fa-save me-1"></i> ${submitTitle}</button>
-
     </form>
     </div>
     </div>
