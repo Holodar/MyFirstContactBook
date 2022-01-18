@@ -68,7 +68,7 @@ public class ContactController {
 
 
     //delete contact in {id}
-    @DeleteMapping("/{id}")
+    @PostMapping("/{id}/delete")
     public String delete(@PathVariable("id")int id){
         contactService.delete(id);
         return "redirect:/";

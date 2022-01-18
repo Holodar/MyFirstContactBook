@@ -23,19 +23,16 @@
           <tbody>
           <#list contact as contacts>
               <tr>
-                  <td><a href="${'/' + contacts.id}" class="link-light " >${contacts.firstName}</td>
+                  <td><a href="${'/' + contacts.id}" class="link-light ">${contacts.firstName}</a></td>
                   <td>${contacts.secondName}</td>
                   <td>${contacts.numbers}</td>
-                  <td><button type="button" onclick="document.location='/${contacts.id}/edit'" class="btn btn-light">Edit contact</button>
-                      <#--<form action= method="get">
-                          <input type="submit" value="Edit"/>
-                      </form> --></td>
+                  <td><a class="btn btn-light" href="/${contacts.id}/edit">Edit</a></td>
               </tr>
           </#list>
           </tbody>
       </table>
       </div>
-      <button type="button" onclick="document.location='/new'" class="btn btn-primary mt-3"><i class="fas fa-plus me-1"></i> Create new contact</button>
+      <a href='/new' class="btn btn-primary mt-3"><i class="fas fa-plus me-1"></i> Create new contact</a>
   </div>
 
 </body>
